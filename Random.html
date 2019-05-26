@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Randomizer</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+<style>
+    body {
+        background-image: url("https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-repeat: repeat;
+    }
+    #contain {
+        margin-top: 10% !important;
+        margin: 0 auto;
+        width: 650px;
+        height: 50vh;
+        background-color: rgb(105, 104, 104);
+    }
+
+    h2 {
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 35px;
+        color: white;
+    }
+
+    input {
+        margin-top: 8px;
+        margin-bottom: 10px;
+        width: 60%;
+        padding-left: 10px;
+    }
+
+    #movedown {
+        margin-top: 10px;
+    }
+
+    p {
+        display: none;
+        color: white;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <div id="contain">
+        <h2>Randomizer</h2>
+    <hr>
+        <center>
+            <input type="text" id="input" placeholder="Enter Items"><br>
+            <button onclick="retainInfo()">Add Item</button>
+            <button onclick="startOver()"> start over </button><br>
+            <button id="movedown" onclick="randomResult()">Randomize</button>
+        </center>
+
+        <p id="text"></p>
+    </div>
+
+<script>
+
+    var info = document.getElementById("input");
+    var text = document.getElementById("text");
+
+    var run = true;
+    var xfer = "";
+    var list = [];
+    var holder = 0;
+
+    info.addEventListener("keyup", function(e){
+        if (e.keyCode === 13 ){
+            retainInfo();
+        }
+    })
+
+    function retainInfo() {
+        var get = info.value;
+        list[holder] = get;
+        holder++;
+        info.value = "";
+        console.log(list);
+    }
+
+    function randomResult() {
+        if (run) {
+            if (list.length == 0 || list.length == 1) {
+                text.textContent = "You Need Atlease 2 items!"
+                text.style.display = "block";
+            } else {
+                var matho = Math.floor(Math.random() * list.length);
+                xfer = list[matho];
+                text.style.display = "block";
+                text.textContent = xfer;
+                run = false;
+            }
+        } else {
+            text.textContent = xfer + " was already chosen";
+        }
+    }
+    function startOver() {
+        window.location.href = "Random.html";
+    }
+
+</script>
+</body>
+</html>
