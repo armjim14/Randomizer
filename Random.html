@@ -12,6 +12,7 @@
         background-repeat: repeat;
     }
     #contain {
+        position: relative;
         margin-top: 10% !important;
         margin: 0 auto;
         width: 650px;
@@ -41,24 +42,36 @@
     p {
         display: none;
         color: white;
-        margin-top: 20%;
+        line-height: 25vh;
         text-align: center;
     }
 
+    @media screen and (max-width: 700px) {
+        #contain { width: 90%; }
+    }
+    @media screen and (max-height: 700px) {
+        #text { margin-top: 0; }
+    }
+    @media screen and (max-height: 540px) {
+        #contain { height: 60vh; }
+    }
+    @media screen and (max-height: 450px) {
+        #contain { height: 70vh; margin-top: 5% !important;}
+    }
 </style>
 </head>
 <body>
     <div id="contain">
         <h2>Randomizer</h2>
     <hr>
+        
         <center>
             <input type="text" id="input" placeholder="Enter Items"><br>
             <button onclick="retainInfo()">Add Item</button>
             <button onclick="startOver()"> start over </button><br>
             <button id="movedown" onclick="randomResult()">Randomize</button>
         </center>
-
-        <p id="text"></p>
+            <p id="text"></p>
     </div>
 
 <script>
