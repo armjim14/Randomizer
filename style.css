@@ -1,0 +1,108 @@
+body {
+    background-color: darkgray;
+}
+
+header {
+    position: relative;
+    margin: 0 auto;
+    background-color: lightgray;
+    height: 10vh;
+    width: 900px;
+}
+
+#clear {
+    float: right;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+#clear {
+    float: right;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.click {
+    width: 60px;
+    font-size: 15px;
+    height: 30px;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+}
+.click:hover {
+    font-weight: bold;
+}
+
+#date {
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    color: rgb(65, 82, 94);
+    font-weight: bold;
+    font-size: 18px;
+}
+    /* header ends here */
+
+section {
+    overflow: auto;
+    padding-top: 1vh;
+    margin: 0 auto;
+    background-color: rgb(163, 252, 255);
+    height: 79vh;
+    width: 892px;
+    border-left: lightgray 4px solid;
+    border-right: lightgray 4px solid;
+}
+
+ul {
+    padding-top: 15px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+ul.a {
+    list-style-type: none;
+}
+
+p {
+    font-size: 25px;
+    float: right;
+    width: 90%;
+}
+
+p.num {
+    text-decoration: none;
+}
+    /* section ends here  */
+
+footer {
+    background-color: lightgray;
+    margin: 0 auto;
+    height: 10vh;
+    width: 900px;
+}
+
+#submit {
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 10px;
+}
+
+#user {
+    width: 500px;
+    padding-left: 5px;
+}
+
+.delete {
+    margin-right: 7px;
+    margin-left: 8px;
+}
+
+.whole {
+    margin-left: 10px;
+    height: 50px;
+}
+
+@media screen and (max-width: 950px) {
+    header, section, footer { width: 100%; }
+}
