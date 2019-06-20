@@ -66,8 +66,8 @@ ul.a {
 
 p {
     font-size: 25px;
-    float: right;
-    width: 90%;
+    display: inline;
+    margin-left: 15px;
 }
 
 p.num {
