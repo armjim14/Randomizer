@@ -105,4 +105,10 @@ footer {
 
 @media screen and (max-width: 950px) {
     header, section, footer { width: 100%; }
+    #user { width: 50%; }
+}
+
+@media screen and (max-width: 400px) {
+    .select { font-size: 40px; }
+    #date { font-size: 27px; }
 }
