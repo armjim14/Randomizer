@@ -82,15 +82,31 @@ footer {
     width: 900px;
 }
 
+#bottom-both {
+    width: 100%;
+}
+
+#button-side {
+    margin-top: 22px;
+    width: 19%;
+    float: left;
+}
+
 #submit {
-    margin-top: 20px;
-    margin-left: 15%;
-    margin-right: 10px;
+    float: right;
+}
+
+#input-side {
+    width: 79%;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 #user {
-    width: 500px;
-    padding-left: 5px;
+    margin-top: 25px;
+    width: 70%;
 }
 
 .delete {
@@ -103,13 +119,17 @@ footer {
     height: 50px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     header, section, footer { width: 100%; }
-    #user { width: 50%; }
-    #date { color: red; }
+    section { border: none; }
+    #date { color: red; font-size: 200%; }
+    .select { font-size: 30px; }
+    #clear { position: absolute; bottom: 5px; right: 5px; }
 }
 
-/* @media screen and (max-width: 400px) {
-    .select { font-size: 40px; }
-    #date { font-size: 50px; }
-} */
+@media screen and (max-width: 400px) {
+    #button-side { width: 99%; align-items: center; justify-content: center; display: flex; }
+    #input-side { width: 100%; }
+    section { height: 77vh; }
+    footer { height: 12vh; }
+}
