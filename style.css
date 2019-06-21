@@ -119,7 +119,7 @@ footer {
     height: 50px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     header, section, footer { width: 100%; }
     section { border: none; }
     #date { color: red; font-size: 200%; }
