@@ -2,12 +2,17 @@ body {
     background-color: darkgray;
 }
 
+#whole {
+    width: 900px;
+    margin: auto;
+}
+
 header {
     position: relative;
     margin: 0 auto;
     background-color: lightgray;
     height: 10vh;
-    width: 900px;
+    width: 100%;
 }
 
 #clear {
@@ -49,9 +54,9 @@ section {
     margin: 0 auto;
     background-color: rgb(163, 252, 255);
     height: 79vh;
-    width: 892px;
+    width: 99%;
     border-left: lightgray 4px solid;
-    border-right: lightgray 4px solid;
+    border-right: lightgray 5px solid;
 }
 
 ul {
@@ -79,7 +84,7 @@ footer {
     background-color: lightgray;
     margin: 0 auto;
     height: 10vh;
-    width: 900px;
+    width: 100%
 }
 
 #bottom-both {
@@ -119,23 +124,12 @@ footer {
     height: 50px;
 }
 
-@media screen and (max-width: 1000px) {
-    header, section, footer { width: 100%; }
-    header { height: 7vh; }
-    section { border: none; height: 84vh; }
-    footer { height: 8vh; }
-    #date { font-size: 270%; }
-    .delete, .check { width: 50px; height: 90%; }
-    .select { font-size: 36px; }
-    #clear { position: absolute; bottom: 5px; right: 5px; width: 100px; height: 50px; font-size: 150%; }
-    #submit { width: 100px; height: 50px; font-size: 150%; }
-    #button-side { margin-top: 17px; }
-    #user { height: 25px; font-size: 24px; padding-left: 5px; }
+@media screen and (max-width: 900px){
+    #whole{ width: 100%; }
+    section { width: 98% }
 }
 
-@media screen and (max-width: 400px) {
-    #button-side { width: 99%; align-items: center; justify-content: center; display: flex; }
-    #input-side { width: 100%; }
-    section { height: 77vh; }
-    footer { height: 12vh; }
+@media screen and (max-width: 430px){
+    section { width: 97% }
+    #date { font-size: 25px }
 }
