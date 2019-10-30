@@ -1,6 +1,6 @@
 # ToDo-List
 
-## Description: A todo list that has the current date on the top-left
+## Description: A todo list that gets saved in the local storage and that has the current date on the top-left
 
 ## How it is organaize:
 ### You write in the input towards the bottom
